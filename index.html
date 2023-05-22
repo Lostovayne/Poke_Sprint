@@ -31,16 +31,19 @@
           id="form"
         >
           <fieldset
-            class="d-flex gap-2 align-items-center col-10 mx-auto col-md-4"
+            class="d-flex gap-2 align-items-center justify-content-center col-12 mx-auto"
           >
             <input
               type="text"
               placeholder="Buscar por Nombre o Id "
-              class="form-control"
+              class="form-control w-50"
               name="input"
             />
 
             <button class="btn btn-primary">Buscar</button>
+            <a class="btn btn-primary" href="/secondary.html"
+              >listado Pokemones</a
+            >
           </fieldset>
         </form>
         <div
@@ -49,6 +52,47 @@
         ></div>
       </section>
     </main>
+
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5
+              class="modal-title text-center fw-bolder text-uppercase"
+              id="exampleModalLabel"
+            ></h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="d-flex justify-content-center">
+              <canvas id="myChart"></canvas>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
@@ -60,7 +104,6 @@
       integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
       crossorigin="anonymous"
     ></script>
-
     <script type="module" src="./src/index.js"></script>
   </body>
 </html>
